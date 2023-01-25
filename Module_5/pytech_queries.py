@@ -15,7 +15,6 @@ for doc in docs:
     print(f"Last Name: {doc['last_name']}")
     print()
     
-    
 # display a single document by student_id
 
 print ("--DISPLAYING STUDENT DOCUMENT FROM find_one() QUERY--")

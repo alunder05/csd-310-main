@@ -15,6 +15,7 @@ for doc in docs:
     print(f"First Name: {doc['first_name']}")
     print(f"Last Name: {doc['last_name']}")
     print()
+
     
 
 
