@@ -1,3 +1,5 @@
+from copy import error
+from fileinput import close
 import mysql.connector 
 
 from mysql.connector import errorcode 
@@ -25,13 +27,13 @@ except mysql.connector.Error as err:
  
      print(" The supplied username or password are invalid")  
 
-     elif err.errno == errorcode.ER_BAD_DB_ERROR:  
+    elif err.errno == errorcode.ER_BAD_DB_ERROR:  
 
-    print(" The specified database does not exist")  
+     print(" The specified database does not exist")  
 
-    else:  
+else:  
     
-    print(err)  
+    print(error)  
 
 finally:  
     db:close()  
