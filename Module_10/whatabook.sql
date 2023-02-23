@@ -86,3 +86,34 @@ INSERT INTO book(book_name, author)
     VALUES('Harry Potter and the Half-Blood Prince', 'J.K. Rowling');
     
 
+/*users*/
+
+INSERT INTO user(first_name, last_name)
+    VALUES('John', 'Doe');
+
+INSERT INTO user(first_name, last_name)
+    VALUES('Jim', 'Beam');
+
+INSERT INTO user(first_name, last_name)
+    VALUES('Evan', 'Williams');
+
+/*wishlist*/
+
+INSERT INTO wishlist(user_id, book_id)
+    VALUES(
+        (SELECT user_id FROM user WHERE first_name = 'Jim'),
+        (SELECT book_id FROM book WHERE book_name = 'Harry Potter and the Sorcerers Stone')
+    );
+
+INSERT INTO wishlist(user_id, book_id)
+    VALUES(
+        (SELECT user_id FROM user WHERE first_name = 'Evan'),
+        (SELECT book_id FROM book WHERE book_name = 'Of Mice and Men')
+    );
+
+INSERT INTO wishlist(user_id, book_id)
+    VALUES(
+        (SELECT user_id FROM user WHERE first_name = 'John'),
+        (SELECT book_id FROM book WHERE book_name = 'The Shining')
+    );
+
