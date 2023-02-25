@@ -48,7 +48,7 @@ def show_books(_cursor):
 def validate_user():
 
     try:
-        user_id = int(input('\n Enter a customer id <Example 1 for user_id 1>: '))
+        user_id = int(input('\n Enter a customer id \:'))
 
         if user_id < 0 or user_id > 3:
             print("\n  Customer number invalid, try again...\n")
