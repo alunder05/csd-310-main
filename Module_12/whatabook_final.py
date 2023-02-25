@@ -120,10 +120,10 @@ try:
     while user_selection != 4:
 
         if user_selection == 1:
-            show_locations(cursor)
+            show_locations
 
         if user_selection == 2:
-            show_books(cursor)
+            show_books
 
         if user_selection == 3:
             my_user_id = validate_user()
@@ -132,15 +132,15 @@ try:
             while account_option != 3:
 
                 if account_option == 1:
-                    show_wishlist(cursor, my_user_id)
+                    show_wishlist
 
                 if account_option == 2:
 
-                    show_books_to_add(cursor, my_user_id)
+                    show_books_to_add
 
                     book_id = int(input("\n Enter the id of the book you want to add: "))
                     
-                    add_book_to_wishlist(cursor, my_user_id, book_id)
+                    add_book_to_wishlist(my_user_id, book_id)
 
                     db.commit() 
 
